@@ -6,7 +6,7 @@ Project for EN.645.631.82, an Introduction to Model Based Systems Engineering at
 Distributed under the Apache License 2.0. See `LICENSE.txt` for more information.
 
 ## Methodology
-Development followed the Object Oriented Systems Engineering Method (OOSEM) with interative refinements as feedback was obtained. OOSEM was tailored to meet project objectives and contraints. Our tailored version of OOSEM  involves 9 basic activities:
+Development followed the Object Oriented Systems Engineering Method (OOSEM) with iterative refinement on each activity. OOSEM was tailored to meet our project objectives and contraints. This tailored version of OOSEM  involves 9 basic activities:
 
 1. **Set Up Model:** Establish the models organization. It lays out the modeling convention and standards, ensures consistent representation and style across the model.
 1. **Analyze Stakeholder Needs:** An activity to identify stakeholders and their needs. This includes understanding the stakeholders' goals, objectives, and constraints.
