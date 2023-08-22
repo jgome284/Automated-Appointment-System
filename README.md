@@ -23,7 +23,7 @@ Development followed the Object Oriented Systems Engineering Method (OOSEM) with
 
 ## Release Content
 * In the `model` directory.
-  * System Model of the Automated Appointment System, `.mdzip` file available to import into cameo with addtional `.mdzip.bak` backup file.
+  * System Model of the Automated Appointment System, `.mdzip` file available to import into cameo with an additional `.mdzip.bak` backup file.
       * `Automated Appointment System (AAS) Model.mdzip`
       * `Automated Appointment System (AAS) Model.mdzip.bak`
 
