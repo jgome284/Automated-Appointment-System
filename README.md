@@ -3,7 +3,7 @@
 Project for EN.645.631.82, an Introduction to Model Based Systems Engineering at Johns Hopkins University. Artifacts for the design of an Automated Appointment System.
 
 ## License
-Distributed under the Apache License 2.0. See `LICENSE.txt` for more information.
+Distributed under the Apache License 2.0. See `LICENSE` for more information.
 
 ## Methodology
 Development followed the Object Oriented Systems Engineering Method (OOSEM) with iterative refinement on each activity. OOSEM was tailored to meet our project objectives and contraints. This tailored version of OOSEM  involves 9 basic activities:
