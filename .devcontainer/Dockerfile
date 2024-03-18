@@ -14,6 +14,8 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     # This command updates the package lists for the APT (Advanced Package Tool) package manager. 
     # It fetches the latest information about available packages from the configured repositories.
+    apt-get install -y git && \
+    # Install git for version control
     apt-get clean && \
     # After installing packages, the apt-get clean command is used to clean up the APT package cache. 
     # This removes downloaded package files (.deb) that are no longer needed, reducing the size of the Docker image.
@@ -25,8 +27,8 @@ RUN apt-get update && \
 
 # Install latest version of npm
 RUN npm install -g npm@latest && \
-    corepack enable && \
-    yarn set version berry
+    # Install static server
+    npm install -g serve
 
-# Check node version when the container launches
-CMD ["node, -v"]
+# Deploy production build on local device
+CMD ["serve, -s, appt-planner/build"]
