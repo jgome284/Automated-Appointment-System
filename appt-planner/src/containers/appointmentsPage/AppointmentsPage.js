@@ -50,10 +50,20 @@ export const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
     <div>
       <section>
         <h2>Add Appointment</h2>
+        <AppointmentForm
+          contacts={contacts}
+          name={name}
+          contact={contact}
+          date={date}
+          time={time}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
       </section>
       <hr />
       <section>
         <h2>Appointments</h2>
+        <TileList tiles={appointments} />
       </section>
     </div>
   );
