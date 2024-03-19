@@ -11,7 +11,8 @@ export const ContactForm = ({
     <>
       <form onSubmit={handleSubmit} onChange={handleChange}>
         <label for="name">Name</label>
-        <input 
+        <input
+          required 
           type="text" 
           id="name" 
           name="name" 
@@ -21,7 +22,8 @@ export const ContactForm = ({
         />
         <br />
         <label for="phone">Phone</label>
-        <input 
+        <input
+          required  
           type="tel" 
           id="phone" 
           name="phone" 
@@ -31,7 +33,8 @@ export const ContactForm = ({
         />
         <br />
         <label for="email">Email</label>
-        <input 
+        <input
+          required  
           type="email" 
           id="email" 
           name="email" 
