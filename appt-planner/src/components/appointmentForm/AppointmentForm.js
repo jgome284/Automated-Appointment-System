@@ -9,15 +9,12 @@ const getTodayString = () => {
 
 export const AppointmentForm = ({
   contacts,
-  title,
-  setTitle,
+  name,
   contact,
-  setContact,
   date,
-  setDate,
   time,
-  setTime,
-  handleSubmit
+  handleSubmit,
+  handleChange
 }) => {
 
   return (
