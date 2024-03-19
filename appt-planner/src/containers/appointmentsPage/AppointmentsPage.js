@@ -25,6 +25,27 @@ export const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
     setTime("");
   };
 
+  const handleChange = ({target}) => {
+    const {id, value} = target
+    switch (true) {
+      case (id === 'name'):
+        setName(value);
+        break;
+      case (id === 'contact'):
+        setContact(value);
+        break;
+      case (id === 'date'):
+        setDate(value);
+        break;
+      case (id === 'time'):
+        setTime(value);
+        break;
+      default:
+        console.log('No case set on form change for ID')
+        break;        
+    }
+  }
+
   return (
     <div>
       <section>
