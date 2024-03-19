@@ -23,6 +23,59 @@ export const AppointmentForm = ({
   }, [contacts]);
 
   return (
-    <></>
+    <form onSubmit={handleSubmit}>
+      <label for="name">
+        Appointment Name
+      </label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value={name}
+        onChange={handleChange}
+        required
+        placeholder="Appointment Name"
+        aria-label="Appointment Name"
+      />
+      <br />
+      <label for="contact">
+        Contact
+      </label>
+      <ContactPicker
+        name="contact"
+        value={contact}
+        contacts={contactNames}
+        handleChange={handleChange}
+      />
+      <br />
+      <label for="date">
+        Date
+      </label>
+      <input
+        type="date"
+        name="date"
+        id="date"
+        min={getTodayString()}
+        value={date}
+        onChange={handleChange}
+        required
+        aria-label="Date Picker"
+      />
+      <br />
+      <label for="time">
+        Time
+      </label>
+      <input
+        type="time"
+        name="time"
+        id="time"
+        value={time}
+        onChange={handleChange}
+        required
+        aria-label="Time Picker"
+      />
+      <br />
+      <button aria-label="Add Appointment" type="submit">Add Appointment</button>
+    </form>
   );
 };
