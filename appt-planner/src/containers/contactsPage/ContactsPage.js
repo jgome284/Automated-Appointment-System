@@ -27,6 +27,24 @@ export const ContactsPage = () => {
     }
   };
 
+  const handleChange = ({target}) => {
+    const {id, value} = target
+    switch (true) {
+      case (id === 'name'):
+        setName(value);
+        break;
+      case (id === 'phone'):
+        setPhone(value);
+        break;
+      case (id === 'email'):
+        setEmail(value);
+        break;
+      default:
+        console.log('Id not found')
+        break;        
+    }
+  }
+
   /*
   Using hooks, check for contact name in the 
   contacts array variable in props
