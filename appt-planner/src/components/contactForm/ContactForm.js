@@ -2,15 +2,46 @@ import React from "react";
 
 export const ContactForm = ({
   name,
-  setName,
   phone,
-  setPhone,
   email,
-  setEmail,
-  handleSubmit
+  handleSubmit,
+  handleChange,
 }) => {
   return (
-    <></>
+    <>
+      <form onSubmit={handleSubmit} onChange={handleChange}>
+        <label for="name">Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          value={name} 
+          pattern="^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"
+          placeholder="Contact Name"
+        />
+        <br />
+        <label for="phone">Phone</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          value={phone} 
+          pattern="^(1?)(-| ?)(\()?([0-9]{3})(\)|-| |\)-|\) )?([0-9]{3})(-| )?([0-9]{4}|[0-9]{4})$"
+          placeholder="Contact Phone"
+        />
+        <br />
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          value={email}
+          placeholder="Contact Email"
+        />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </>
   );
 };
 
