@@ -17,6 +17,10 @@ export const AppointmentForm = ({
   handleSubmit,
   handleChange
 }) => {
+  // recalculate contact names on change to contacts list
+  const contactNames = useMemo(() => {
+    return contacts.map((contact) => contact.name);
+  }, [contacts]);
 
   return (
     <></>
