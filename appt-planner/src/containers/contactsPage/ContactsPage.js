@@ -40,7 +40,7 @@ export const ContactsPage = ({contacts, addContact}) => {
         setEmail(value);
         break;
       default:
-        console.log('Id not found')
+        console.log('No case set on form change for ID')
         break;        
     }
   }
@@ -57,13 +57,21 @@ export const ContactsPage = ({contacts, addContact}) => {
   return (
     <div>
       <section>
-        <h2>Add Contact</h2> 
-        <ContactForm name={name} setName={setName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail} handleSubmit={handleSubmit} />
+        <h2>
+          Add Contact
+          {isDuplicate ? " - Name Already Exists! 🚫" : ""}
+        </h2> 
+        <ContactForm 
+          name={name} 
+          phone={phone} 
+          email={email} 
+          handleChange={handleChange}
+          handleSubmit={handleSubmit} />
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contacts={contacts} />
+        <TileList tiles={contacts} />
       </section>
     </div>
   );
