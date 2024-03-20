@@ -1,12 +1,44 @@
 # Automated Appointment System
+
+<br />
+<p align="center">
+  <a href="https://github.com/jgome284/Automated-Appointment-System">
+    <img src="resources/AAS-Banner.png" alt="Automated Appointment System Project Banner">
+  </a>
+
+  <h3 align="center">Foreword</h3>
+
+  <p align="center">
+    System design documents and React webapp prototype for an Automated Appointment System.
+    <br />
+    <a href="https://github.com/jgome284/Automated-Appointment-System/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/jgome284/Automated-Appointment-System/issues">Request Feature</a>
+  </p>
+</p>
+
+## Table of Contents
+
+- [Automated Appointment System](#automated-appointment-system)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+    - [Design Methodology](#design-methodology)
+    - [Webapp Development](#webapp-development)
+    - [Release Content](#release-content)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+    - [Docker](#docker)
+    - [Visual Studio Code](#visual-studio-code)
+  - [Getting started](#getting-started)
+  - [License](#license)
+
 ## About
-Project for EN.645.631.82, an Introduction to Model Based Systems Engineering at Johns Hopkins University. Artifacts for the design of an Automated Appointment System.
 
-## License
-Distributed under the Apache License 2.0. See `LICENSE` for more information.
+This project contains artifacts for the design of an Automated Appointment System and a webapp prototype. System design deliverables were completed for EN.645.631.82, an Introduction to Model Based Systems Engineering at Johns Hopkins University. The webapp was created with [React](https://react.dev/) to demo an early prototype. It can captures new users and creates appointments from the created user list.
 
-## Methodology
-Development followed the Object Oriented Systems Engineering Method (OOSEM) with iterative refinement on each activity. OOSEM was tailored to meet our project objectives and contraints. This tailored version of OOSEM  involves 9 basic activities:
+### Design Methodology
+
+Conceptual design followed the Object Oriented Systems Engineering Method (OOSEM) with iterative refinement on each activity. OOSEM was tailored to meet our project objectives and contraints. This tailored version of OOSEM involves 9 basic activities:
 
 1. **Set Up Model:** Establish the models organization. It lays out the modeling convention and standards, ensures consistent representation and style across the model.
 1. **Analyze Stakeholder Needs:** An activity to identify stakeholders and their needs. This includes understanding the stakeholders' goals, objectives, and constraints.
@@ -18,89 +50,77 @@ Development followed the Object Oriented Systems Engineering Method (OOSEM) with
 1. **Adjust Model Structure:** Natural adjusts to the layout of the system model to account for the logical organization of new system artifacts.
 
 <p align="center">
-  <img src="resources/Tailored_OOSEM.png" />
+  <img src="resources/Tailored_OOSEM.png" alt="Object Oriented System Engineering Methodology"/>
 </p>
 
-## Release Content
-* In the `model` directory.
-  * System Model of the Automated Appointment System, `.mdzip` file available to import into cameo with an additional `.mdzip.bak` backup file.
-      * `Automated Appointment System (AAS) Model.mdzip`
-      * `Automated Appointment System (AAS) Model.mdzip.bak`
+### Webapp Development
 
-* In the `resources` directory
-  * Methodology utilized for systems engineering development
-    * `Tailored_OOSEM.png`
-    
-* The Cameo model report for the Automated Appointment System
-  * `Final Project Report.pptx`
-  
-# Getting Started with Create React App
+Development for [the webapp](./appt-planner/) leveraged React to create a front-end. It provides input to capture new users and handling for new appointments from the created user list. [React](https://react.dev/) is a widely adopted JavaScript framework that is used to build user interfaces. With React, we create reusable components that rerender when changes for them are captured by the Virtual DOM.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Release Content
 
-## Available Scripts
+- In the [`model`](./model/) directory.
+  - System Model of the Automated Appointment System, `.mdzip` file available to import into cameo with an additional `.mdzip.bak` backup file.
+    - `Automated Appointment System (AAS) Model.mdzip`
+    - `Automated Appointment System (AAS) Model.mdzip.bak`
 
-In the project directory, you can run:
+- The Cameo model report for the Automated Appointment System
+  - `Final Project Report.pptx`
 
-### `npm start`
+- In the [`appt-planner`](./appt-planner/) directory.
+  - A react application bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project includes a Dev Container for the webapp to use on Visual Studio Code. It serves as a full-featured development environment with everything needed to run Node. Dev Containers separate tools, libraries, or runtimes needed for working with a codebase. They aid in continuous integration and testing. Dev containers can be run locally or remotely, in a private or public cloud, in a variety of supporting tools and editors.
 
-### `npm test`
+[This DevContainer](.devcontainer) is built IAW the [DevContainers specification](https://containers.dev/implementors/spec/) and tailored for a development environment that runs on Debian GNU/Linux 12 (bookworm). JavaScript dependencies are versioned in accordance with [`package-lock.json`](./appt-planner/package-lock.json) and project configurations are detailed in [`package.json`](./appt-planner/package.json). The devcontainer also has git for version control and several extensions installed for Visual Studio Code as IDE utilities.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- PREREQUISITES -->
+## Prerequisites
 
-### `npm run build`
+### Docker
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start the webapp, you need to have Docker Engine and Docker Compose on your machine. You can either:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) which includes both Docker Engine and Docker Compose. (Recommended ⭐)
+- Install [Docker Engine](https://docs.docker.com/engine/install/binaries/) and [Docker Compose](https://docs.docker.com/compose/install/standalone/) as standalone binaries. (If it suits your fancy 🤵)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Visual Studio Code
 
-### `npm run eject`
+This devcontainer is setup for development on Visual Studio Code. You should have it installed along with the [remote development pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) to enable the IDE's DevContainers functionality.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- GETTING STARTED -->
+## Getting started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start, open VS Code in a directory of your choice. With the terminal, clone this repository via `git clone https://github.com/jgome284/Automated-Appointment-System`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Open Docker Desktop to run the Docker daemon, a background process that manages and coordinates Docker containers on your system. On VS Code, open your local copy of the project and start the development container by running `Dev Containers: Rebuild and Reopen In Container` in the command palette. It can be accessed with the keyboard shortcut `ctrl + shift + P` on your keyboard.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+When the Dev Container launches, `cd` to the [`appt-planner`](./appt-planner/) directory and install project dependencies via npm by executing the following command. If successful, a `node_modules` folder should appear in your directory.
 
-## Learn More
+```sh
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Our `package.json` has many useful scripts aliased via npm. To run the development version of the webapp run the following command.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm start
+```
 
-### Code Splitting
+If you make changes you can package a new production build of the application via the following command. If successful, you should see updated files in the [`build`](./appt-planner/build/) folder for the webapp.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+npm run build
+```
 
-### Analyzing the Bundle Size
+You can deploy the production build of the webapp on your local machine via the `serve` command detailed below. Then, open the webapp on [localhost:3000](http://localhost:3000) ... Make use of the webapp to add fleeting thoughts that warm your merry heart! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ❤️!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+serve -s appt-planner/build
+```
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the Apache License 2.0. See `LICENSE` for more information.
