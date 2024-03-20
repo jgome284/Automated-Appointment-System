@@ -23,7 +23,7 @@ export const AppointmentForm = ({
   }, [contacts]);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} onChange={handleChange}>
       <label for="name">
         Appointment Name
       </label>
@@ -32,7 +32,6 @@ export const AppointmentForm = ({
         name="name"
         id="name"
         value={name}
-        onChange={handleChange}
         required
         placeholder="Appointment Name"
         aria-label="Appointment Name"
@@ -45,7 +44,6 @@ export const AppointmentForm = ({
         name="contact"
         value={contact}
         contacts={contactNames}
-        handleChange={handleChange}
       />
       <br />
       <label for="date">
@@ -57,7 +55,6 @@ export const AppointmentForm = ({
         id="date"
         min={getTodayString()}
         value={date}
-        onChange={handleChange}
         required
         aria-label="Date Picker"
       />
@@ -70,7 +67,6 @@ export const AppointmentForm = ({
         name="time"
         id="time"
         value={time}
-        onChange={handleChange}
         required
         aria-label="Time Picker"
       />

@@ -2,7 +2,7 @@ import React from "react";
 
 export const ContactPicker = ({value, name, handleChange, contacts}) => {
   return (
-    <select aria-label="Contact Picker" value={value} name={name} id="contact" onChange={handleChange}>
+    <select required aria-label="Contact Picker" value={value} name={name} id="contact">
       <option value={""} key={-1}>
         No Contact Selected
       </option>
