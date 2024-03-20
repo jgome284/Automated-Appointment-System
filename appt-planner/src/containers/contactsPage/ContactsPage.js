@@ -50,8 +50,8 @@ export const ContactsPage = ({contacts, addContact}) => {
   contacts array variable in props
   */
   useEffect(() => {
-    const duplicateState = contacts.every((contact) => contact.name !== name);
-    setIsDuplicate(duplicateState)
+      const duplicateState = !contacts.every((contact) => contact.name !== name);
+      setIsDuplicate(duplicateState)
   }, [name, contacts])
 
   return (
