@@ -17,7 +17,7 @@ export const ContactForm = ({
           id="name" 
           name="name" 
           value={name} 
-          pattern="^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"
+          pattern="^([A-Z][A-Za-z ,.'`\-]{3,35})$"
           placeholder="Contact Name"
         />
         <br />
