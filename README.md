@@ -115,7 +115,7 @@ If you make changes you can package a new production build of the application vi
 npm run build
 ```
 
-You can deploy the production build of the webapp on your local machine via the `serve` command detailed below. Then, open the webapp on [localhost:3000](http://localhost:3000) ... Make use of the webapp to add fleeting thoughts that warm your merry heart! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ❤️!
+You can deploy the production build of the webapp on your local machine via the `serve` command detailed below. Then, open the webapp on [localhost:3000](http://localhost:3000) ... Now create new users and add some appointments, yay! ( ﾉ ﾟｰﾟ)ﾉ!
 
 ```sh
 serve -s appt-planner/build
